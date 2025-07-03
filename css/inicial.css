@@ -1,0 +1,156 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../src/Poppins-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #335c67;
+}
+
+/* Menu principal */
+.menu {
+  background-color: #fff3b6;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo do lado esquerdo */
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  color: #9e2a2b;
+}
+
+/* Container da direita (img + botão) */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Imagem */
+.imglogo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Botão */
+.botao {
+  background-color: #9e2a2b;
+  color: #fff3b6;
+  border: none;
+  border-radius: 5px;
+  width: 100px;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.botao:hover {
+  background-color: #7c1f1f;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  padding: 20px;
+  color: #fff3b6;
+}
+
+.container {
+  background-color: #fff3b6;
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px;
+  color: #9e2a2b;
+  margin-bottom: 10px;
+}
+
+.categorias {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.card {
+  background-color: #9e2a2b;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff3b6;
+  display: flex;
+  flex-direction: column;
+  min-width: 22%;
+  align-items: center;    
+  text-align: center;     
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  margin: 10px 10px;
+}
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.4;
+  color: #fff3b6;
+}
+
+.maisavaliados {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.produtos {
+  background-color: #9e2a2b;
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff3b6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  margin: 10px 10px;
+}
+
+.produtos img {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

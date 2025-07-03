@@ -3,48 +3,74 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tela Inicial</title>
+    <link rel="stylesheet" href="../css/inicial.css" />
+    <title>HomePage</title>
   </head>
   <body>
-    <div>
-      <h2>Catálogo de Brinquedos</h2>
-      <p>
-        Esse site tem o objetivo de oferecer os melhores brinquedos com os
-        melhores preços!
-      </p>
-      <h3>Seção 1 - Categorias dos brinquedos</h3>
-      <p>Brinquedos educativos</p>
-      <img
-        src="../src/educativo1.webp"
-        alt="Não foi possível carregar a imagem"
-        width="250px"
-        height="250px"
-      />
-      <a href="categoria1.html">Ver os produtos</a>
-      <p>Brinquedos para bebês</p>
-      <img
-        src="../src/bebe1.webp"
-        alt="Não foi possível carregar a imagem"
-        width="250px"
-        height="250px"
-      />
-      <a href="categoria2.html">Ver os produtos</a>
-      <p>Jogos de tabuleiro</p>
-      <img
-        src="../src/tabuleiro1.jpg"
-        alt="Não foi possível carregar a imagem"
-        width="250px"
-        height="250px"
-      />
-      <a href="categoria3.html">Ver os produtos</a>
-      <p>Brinquedos de pelúcia</p>
-      <img
-        src="../src/pelucia1.webp"
-        alt="Não foi possível carregar a imagem"
-        width="250px"
-        height="250px"
-      />
-      <a href="categoria4.html">Ver os produtos</a>
+    <header>
+      <nav class="menu">
+        <div class="logo">BrinqueBem</div>
+        <div class="right">
+          <a href="carrinho.html"><img class="imglogo" href="X" src="../src/logo.svg" alt="Logo" /></a>
+          <a href="cadastro.html"><input class="botao"  type="submit" value="Cadastrar" /></a>
+        </div>
+      </nav>
+    </header>
+
+    <h1>Esse site tem por objetivo oferecer os melhores brinquedos com os melhores preços!</h1>
+
+    <div class="container">
+      <h2>Categorias de brinquedos</h2>
+      
+      <div class="categorias">
+        <a href="categoria1.html" class="card">
+          <img src="../src/educativo1.webp" alt="Educativos">
+          <h3>Educativos</h3>
+        </a>
+
+        <a href="categoria2.html" class="card">
+          <img src="../src/bebe1.webp" alt="Para bebês">
+          <h3>Para bebês</h3>
+        </a>
+
+        <a href="categoria3.html" class="card">
+          <img src="../src/tabuleiro1.jpg" alt="Tabuleiro">
+          <h3>Tabuleiro</h3>
+        </a>
+
+        <a href="categoria4.html" class="card">
+          <img src="../src/pelucia1.webp" alt="Pelúcias">
+          <h3>Pelúcias</h3>
+        </a>
+        
+
+      </div>
     </div>
+
+    <div class="container">
+      <h2>Brinquedos mais comprados</h2>
+      <div class="maisavaliados">
+        <a href="dEducativo2.html" class="produtos">
+          <img src="../src/educativo2.webp" alt="Educativos">
+        </a>
+
+        <a href="dBebe3.html" class="produtos">
+          <img src="../src/bebe3.webp" alt="Para bebês">
+        </a>
+
+        <a href="dTabuleiro4.html" class="produtos">
+          <img src="../src/tabuleiro4.jpg" alt="Tabuleiro">
+        </a>
+
+        <a href="dPelucia5.html" class="produtos">
+          <img src="../src/pelucia5.webp" alt="Pelúcias">
+        </a>
+
+        <a href="dEducativo3.html" class="produtos">
+          <img src="../src/educativo3.webp" alt="Pelúcias">
+        </a>
+      </div>
+    </div>
+
   </body>
 </html>
