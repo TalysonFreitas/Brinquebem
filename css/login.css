@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Poppins";
+  src: url(../src/Poppins-Regular.ttf);
+}
+
+body {
+    font-family: "Poppins";
+    background-color: #e09f3e;
+    color: #335c67;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 100vh;           /* 100% da altura da tela */
+    margin: 0;
+}
+
+.container {
+    background-color: #ffffff;
+    margin: 40px auto;
+    border-radius: 10px;
+    width: 35%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(180, 90, 0, 0.5);
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    margin: 10px 0 10px;
+}
+
+h5 {
+  text-align: center;
+  border-bottom: 1px solid #e09f3e;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #e09f3e;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+input:focus {
+    border-color: #335c67;
+    outline: none;
+}
+
+input[type="submit"] {
+  background-color: #335c67;
+  color: #fff3b6;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30%;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 20px auto 0;
+}
+
+input[type="submit"]:hover {
+  background-color: #1f3e46;
+}
+
+span {
+  color: #d90429;
+  font-size: 12px;
+  margin-bottom: 2px;
+  display: block;
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+a {
+    color: #d90429;
+    text-decoration: none;
+}
