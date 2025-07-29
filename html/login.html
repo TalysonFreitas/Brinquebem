@@ -5,19 +5,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/login.css" />
   <title>Login</title>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("loginForm");
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        if (!validarLogin()) {
+          alert("Corrija os erros antes de continuar.");
+          return;
+        }
+
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+
+        try {
+          const resposta = await fetch("http://127.0.0.1:5055/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email, senha }),
+          });
+
+          const dados = await resposta.json();
+
+          if (resposta.ok) {
+            alert("Login realizado com sucesso!");
+            window.location.href = "carrinho.html";
+          } else {
+            alert("Erro: " + (dados.erro || "Credenciais inválidas."));
+          }
+        } catch (erro) {
+          alert("Erro de conexão com o servidor.");
+        }
+      });
+    });
+
+    function validarEmail() {
+      const email = document.getElementById("email").value;
+      const erro = document.getElementById("erro-email");
+      if (!email.includes("@") || !email.includes(".com")) {
+        erro.innerText = "E-mail inválido (deve conter @ e .com)";
+        return false;
+      }
+      erro.innerText = "";
+      return true;
+    }
+
+    function validarSenha() {
+      const senha = document.getElementById("senha").value;
+      const erro = document.getElementById("erro-senha");
+      if (senha.length < 8) {
+        erro.innerText = "A senha deve ter pelo menos 8 caracteres";
+        return false;
+      }
+      erro.innerText = "";
+      return true;
+    }
+
+    function validarLogin() {
+      return validarEmail() && validarSenha();
+    }
+  </script>
 </head>
 <body>
   <div class="container">
     <h1>Login</h1>
     <h5>Por favor, insira suas credenciais</h5>
-    <form action="" method="POST">
-      <label for="username">E-mail:</label>
-      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" />
-      <span id="erro-email"></span>
+    <form id="loginForm" method="POST">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="Digite seu e-mail" onchange="validarEmail()" />
+      <span id="erro-email" style="color: red;"></span>
 
-      <label for="password">Senha:</label>
-      <input type="password" id="senha" name="senha" placeholder="Digite sua senha" />
-      <span id="erro-senha"></span>
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" placeholder="Digite sua senha" onchange="validarSenha()" />
+      <span id="erro-senha" style="color: red;"></span>
       
       <input type="submit" value="Entrar" />
     </form>
